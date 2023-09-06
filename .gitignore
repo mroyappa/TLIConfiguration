@@ -1,0 +1,9 @@
+/TLIConfig*
+/.vs
+/obj
+/publish
+/bin/Debug
+/bin/Release/ExceptionLog
+/bin/Release/*.zip
+/bin/Release/*test
+/bin/Release/app.publish

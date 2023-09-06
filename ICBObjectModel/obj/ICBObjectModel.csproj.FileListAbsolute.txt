@@ -1,0 +1,10 @@
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\bin\Debug\ICBObjectModel.dll
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\bin\Debug\ICBObjectModel.pdb
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\obj\Debug\ICBObjectModel.dll
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\obj\Debug\ICBObjectModel.pdb
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\bin\Release\ICBObjectModel.dll
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\bin\Release\ICBObjectModel.pdb
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\obj\Release\ICBObjectModel.dll
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ICBObjectModel\obj\Release\ICBObjectModel.pdb

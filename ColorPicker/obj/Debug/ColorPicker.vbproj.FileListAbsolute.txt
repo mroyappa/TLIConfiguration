@@ -1,0 +1,51 @@
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.dll
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.pdb
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.xml
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.ColorPicker.resources
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.Resources.resources
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ResGen.read.1.tlog
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ResGen.write.1.tlog
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.dll
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.xml
+F:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.pdb
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.dll
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.pdb
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.xml
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.ColorPicker.resources
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.Resources.resources
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.dll
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.xml
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.pdb
+C:\Projects\I-C Bergan\Pensacola\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.vbproj.GenerateResource.Cache
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.dll
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.pdb
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\bin\Debug\ColorPicker.xml
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.vbprojResolveAssemblyReference.cache
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.ColorPicker.resources
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.Resources.resources
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.vbproj.GenerateResource.Cache
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.dll
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.xml
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfiguration\ColorPicker\obj\Debug\ColorPicker.pdb
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\bin\Debug\ColorPicker.dll
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\bin\Debug\ColorPicker.pdb
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\bin\Debug\ColorPicker.xml
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\obj\Debug\ColorPicker.vbprojResolveAssemblyReference.cache
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\obj\Debug\ColorPicker.ColorPicker.resources
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\obj\Debug\ColorPicker.Resources.resources
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\obj\Debug\ColorPicker.vbproj.GenerateResource.Cache
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\obj\Debug\ColorPicker.dll
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\obj\Debug\ColorPicker.xml
+C:\Users\mroyappa\Documents\TLIRuntime+Config\TLIConfigurationModbus\ColorPicker\obj\Debug\ColorPicker.pdb
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\bin\Debug\ColorPicker.dll
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\bin\Debug\ColorPicker.pdb
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\bin\Debug\ColorPicker.xml
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.vbproj.AssemblyReference.cache
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.ColorPicker.resources
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.Resources.resources
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.vbproj.GenerateResource.cache
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.vbproj.CoreCompileInputs.cache
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.dll
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.xml
+C:\Users\mroyappa.ICBERGAN\Documents\TLIRuntime+Config\TLIConfigurationModbus\second try\ColorPicker\obj\Debug\ColorPicker.pdb

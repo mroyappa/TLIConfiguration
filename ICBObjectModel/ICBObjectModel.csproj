@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30C03386-4053-4875-BA87-33764DCA1585}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICBObjectModel</RootNamespace>
+    <AssemblyName>ICBObjectModel</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINXP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINXP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmAnnunciation.cs" />
+    <Compile Include="AlarmGroup.cs" />
+    <Compile Include="AlarmInstance.cs" />
+    <Compile Include="AlarmPoint.cs" />
+    <Compile Include="AlarmPriority.cs" />
+    <Compile Include="AMU.cs" />
+    <Compile Include="AMUInput.cs" />
+    <Compile Include="AMUOutput.cs" />
+    <Compile Include="ModbusInput.cs" />
+    <Compile Include="ModularBubblerChannel.cs" />
+    <Compile Include="ModularBubblerEZT.cs" />
+    <Compile Include="ModularBubblerInput.cs" />
+    <Compile Include="DigitalOutput.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="EquipmentUnit.cs" />
+    <Compile Include="GaugePoint.cs" />
+    <Compile Include="GroupDisplay.cs" />
+    <Compile Include="IOErrorCount.cs" />
+    <Compile Include="IOFault.cs" />
+    <Compile Include="IOProcessValue.cs" />
+    <Compile Include="IOProcessVariable.cs" />
+    <Compile Include="IOStatus.cs" />
+    <Compile Include="ModbusInterface.cs" />
+    <Compile Include="ModularBubbler.cs" />
+    <Compile Include="MTDE.cs" />
+    <Compile Include="MTDEInterface.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SCU.cs" />
+    <Compile Include="SoundingCorrection.cs" />
+    <Compile Include="StopGauge.cs" />
+    <Compile Include="StopGaugeInstance.cs" />
+    <Compile Include="TAU.cs" />
+    <Compile Include="TAUInput.cs" />
+    <Compile Include="UnitConversions.cs" />
+    <Compile Include="Vessel.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
