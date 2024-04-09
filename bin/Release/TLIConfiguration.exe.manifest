@@ -4,7 +4,7 @@
   <description asmv2:iconFile="berganIcon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="TLIConfiguration" version="8.9.1.7" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="TLIConfiguration" version="8.9.1.8" language="neutral" processorArchitecture="msil" />
     <commandLine file="TLIConfiguration.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -60,7 +60,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>z/jnLMVas7GWE4NF2lhJKERetx8=</dsig:DigestValue>
+        <dsig:DigestValue>2I6NBPRSSxv5rKjYhEF+XEhGt3I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,19 +72,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>u5aA6jCeGNplMHvGyhXHYFH6J50=</dsig:DigestValue>
+        <dsig:DigestValue>4AD0d8Tv+rY1VU1x/vkQzVQSDpY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TLIConfiguration.exe" size="946600">
-      <assemblyIdentity name="TLIConfiguration" version="8.9.1.7" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TLIConfiguration.exe" size="947112">
+      <assemblyIdentity name="TLIConfiguration" version="8.9.1.8" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZFX8IdFVwOSbAqp/z5jS/XVo1ls=</dsig:DigestValue>
+        <dsig:DigestValue>36f865C19bcqaXKvXtizqkIIZ5g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

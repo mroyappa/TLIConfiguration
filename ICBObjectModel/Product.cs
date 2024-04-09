@@ -24,6 +24,7 @@ namespace ICBObjectModel
 		private byte m_bGaugeColorR;
 		private byte m_bGaugeColorG;
 		private byte m_bGaugeColorB;
+		private int id = 0;
 
 		public Product()
 		{
@@ -38,9 +39,21 @@ namespace ICBObjectModel
 			m_bGaugeColorR = cGaugeColor.R;
 			m_bGaugeColorG = cGaugeColor.G;
 			m_bGaugeColorB = cGaugeColor.B;
-		}
+        }
 
-		public Product(string sProduct, float fSpecificGravity, int iSpecificGravityUnits, bool bCargo, byte bGaugeColorR, byte bGaugeColorG, byte bGaugeColorB)
+        public Product(string sProduct, float fSpecificGravity, int iSpecificGravityUnits, bool bCargo, Color cGaugeColor, int id)
+        {
+            m_sProduct = sProduct;
+            m_fSpecificGravity = fSpecificGravity;
+            m_bCargo = bCargo;
+            m_iSpecificGravityUnits = iSpecificGravityUnits;
+            m_bGaugeColorR = cGaugeColor.R;
+            m_bGaugeColorG = cGaugeColor.G;
+            m_bGaugeColorB = cGaugeColor.B;
+			this.id = id;
+        }
+
+        public Product(string sProduct, float fSpecificGravity, int iSpecificGravityUnits, bool bCargo, byte bGaugeColorR, byte bGaugeColorG, byte bGaugeColorB)
 		{
 			m_sProduct = sProduct;
 			m_fSpecificGravity = fSpecificGravity;
@@ -135,6 +148,12 @@ namespace ICBObjectModel
 		{
 			get { return m_bGaugeColorB; }
 			set { m_bGaugeColorB = value; }
+		}
+
+		public int ID
+		{
+			get { return id; }
+			set { id = value; }
 		}
 	}
 }

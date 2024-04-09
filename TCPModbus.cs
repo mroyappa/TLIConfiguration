@@ -411,7 +411,38 @@ namespace TLIConfiguration
 
 								gaugeTable.Rows.Add(dr);
 
-							}
+                                // product ID
+                                dr = gaugeTable.NewRow();
+
+                                dr["EquipmentID"] = eu.EquipmentID;
+                                dr["ProcessID"] = gp.ProcessID;
+                                dr["EquipmentName"] = eu.EquipmentTypeString + " - " + eu.Equipment;
+                                dr["GaugeName"] = "Product ID";
+                                dr["GaugeSort"] = GaugeType.GetModbusGaugeSort(99, 0);
+
+                                dr["ModbusInterfaceIndex"] = 3;  //index 3: product id if applicable
+
+                                if (gp.TCPModbusInterfaceArray != null &&
+                                    gp.TCPModbusInterfaceArray.Length > 3 &&
+                                    gp.TCPModbusInterfaceArray[3] != null)
+                                {
+                                    ModbusInterface idInterface = gp.TCPModbusInterfaceArray[3];
+                                    if (idInterface.Enable && idInterface.RegisterAddress1 > 0)
+                                    {
+                                        if (gp.TCPModbusInterfaceArray[0].RegisterAddress1 > 40000)
+                                            currentBase = 40000;
+                                        else
+                                            currentBase = 30000;
+
+                                        dr["ModbusDataType"] = ModbusDataType.GetModbusDataTypeString(idInterface.ModbusDataType);
+                                        dr["RegisterAddress1"] = idInterface.RegisterAddress1;
+                                        dr["Scale"] = idInterface.Scale;
+                                    }
+                                }
+
+                                gaugeTable.Rows.Add(dr);
+
+                            }
 							else
 							{
 								if (gp.TCPModbusInterfaceArray != null)
@@ -717,7 +748,7 @@ namespace TLIConfiguration
 							gp = TLIConfiguration.VesselGaugePoints[sEquipmentID][sProcessID];
 
 							if (gp.TCPModbusInterfaceArray == null)
-								gp.TCPModbusInterfaceArray = new ModbusInterface[3];
+								gp.TCPModbusInterfaceArray = new ModbusInterface[4];
 
 							//if (gp.TCPModbusInterfaceArray.Length < 3)
 							//	gp.TCPModbusInterfaceArray = Util.ExtendArray(gp.TCPModbusInterfaceArray, 3);

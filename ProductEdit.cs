@@ -84,8 +84,9 @@ namespace TLIConfiguration
 				customXceedGridControl.AddBoundColumn("SpecificGravity", "Specific Gravity", true, false, 100);
 				customXceedGridControl.AddBoundColumn("Cargo", "Cargo", true, false, 75);
 				customXceedGridControl.AddBoundColumn("GaugeColor", "Product Color", true, false, 100);
+                customXceedGridControl.AddBoundColumn("ID", "ID", true, false, 50);
 
-				customXceedGridControl.Columns["GaugeColor"].HorizontalAlignment = Xceed.Grid.HorizontalAlignment.Left;
+                customXceedGridControl.Columns["GaugeColor"].HorizontalAlignment = Xceed.Grid.HorizontalAlignment.Left;
 				customXceedGridControl.DataRowTemplate.Cells["GaugeColor"].CellEditorManager = new ColorPickerCellEditorManager();
 				m_InsertionRow.Cells["GaugeColor"].CellEditorManager = new ColorPickerCellEditorManager();
 				customXceedGridControl.DataRowTemplate.Cells["GaugeColor"].Paint += new Xceed.Grid.GridPaintEventHandler(GaugeColorCellPaint);
@@ -115,7 +116,7 @@ namespace TLIConfiguration
 
 				customXceedGridControl.EndInit();
 
-				customXceedGridControl.HideUnwantedGridColumns(new string[] { "ProductName", "SpecificGravity", "Cargo", "GaugeColor" });
+				customXceedGridControl.HideUnwantedGridColumns(new string[] { "ProductName", "SpecificGravity", "Cargo", "GaugeColor", "ID" });
 			}
 			catch (Exception e)
 			{
@@ -133,8 +134,9 @@ namespace TLIConfiguration
 			m_dtDataTable.Columns.Add("SpecificGravity", typeof(float));
 			m_dtDataTable.Columns.Add("Cargo", typeof(bool));
 			m_dtDataTable.Columns.Add("GaugeColor", typeof(Color));
+            m_dtDataTable.Columns.Add("ID", typeof(int));
 
-			foreach (Product p in TLIConfiguration.Vessel.Product)
+            foreach (Product p in TLIConfiguration.Vessel.Product)
 			{
 				dr = m_dtDataTable.NewRow();
 
@@ -143,8 +145,9 @@ namespace TLIConfiguration
 				dr["SpecificGravity"] = p.SpecificGravity;
 				dr["Cargo"] = p.Cargo;
 				dr["GaugeColor"] = p.GaugeColor;
+                dr["ID"] = p.ID;
 
-				m_dtDataTable.Rows.Add(dr);
+                m_dtDataTable.Rows.Add(dr);
 				dr.AcceptChanges();
 			}
 		}
@@ -268,10 +271,14 @@ namespace TLIConfiguration
 			foreach (DataRow dr in dt.Rows)
 			{
 				if (dr.RowState == DataRowState.Added || dr.RowState == DataRowState.Unchanged)
-					TLIConfiguration.Vessel.Product.Add(new Product(dr["ProductName"].ToString(), Convert.ToSingle(dr["SpecificGravity"]), 0, Convert.ToBoolean(dr["Cargo"]), (Color)dr["GaugeColor"]));
+					TLIConfiguration.Vessel.Product.Add(
+						new Product(dr["ProductName"].ToString(), Convert.ToSingle(dr["SpecificGravity"]), 0,
+						Convert.ToBoolean(dr["Cargo"]), (Color)dr["GaugeColor"], Convert.ToInt32(dr["ID"])));
 				else if (dr.RowState == DataRowState.Modified)
 				{
-					TLIConfiguration.Vessel.Product.Add(new Product(dr["ProductName"].ToString(), Convert.ToSingle(dr["SpecificGravity"]), 0, Convert.ToBoolean(dr["Cargo"]), (Color)dr["GaugeColor"]));
+					TLIConfiguration.Vessel.Product.Add(
+						new Product(dr["ProductName"].ToString(), Convert.ToSingle(dr["SpecificGravity"]), 0,
+						Convert.ToBoolean(dr["Cargo"]), (Color)dr["GaugeColor"], Convert.ToInt32(dr["ID"])));
 					UpdateProductInVessselConfiguration(dr);
 				}
 				else if (dr.RowState == DataRowState.Deleted)

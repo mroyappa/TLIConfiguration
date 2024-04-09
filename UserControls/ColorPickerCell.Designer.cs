@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace TLIConfiguration
 {
 	partial class ColorPickerCell
@@ -28,31 +31,41 @@ namespace TLIConfiguration
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.colorPicker = new ColorPicker.ColorPicker();
 			this.SuspendLayout();
 			// 
 			// colorPicker
 			// 
-			this.colorPicker.Location = new System.Drawing.Point(-9, -6);
-			this.colorPicker.Name = "colorPicker";
-			this.colorPicker.Size = new System.Drawing.Size(209, 39);
-			this.colorPicker.TabIndex = 10;
-			this.colorPicker.TextDisplayed = false;
+			//this.colorPicker.Location = new System.Drawing.Point(-9, -6);
+			//this.colorPicker.Name = "colorPicker";
+			//this.colorPicker.Size = new System.Drawing.Size(209, 39);
+			//this.colorPicker.TabIndex = 10;
+			//this.colorPicker.TextDisplayed = false;
 			// 
 			// ColorPickerCell
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.colorPicker);
+			//this.Controls.Add(this.colorPicker);
 			this.Name = "ColorPickerCell";
 			this.Size = new System.Drawing.Size(173, 22);
+			this.Click += new System.EventHandler(this.onclick);
 			this.ResumeLayout(false);
 
 		}
 
-		#endregion
+		private void onclick(object sender, EventArgs e)
+		{
+            if (colorPicker.ShowDialog() == DialogResult.OK)
+            {
+                //Console.WriteLine("COLORS : " + colorPicker.Color.ToString());
+                Value = colorPicker.Color;
+            }
+        }
 
-		private ColorPicker.ColorPicker colorPicker;
+        #endregion
+
+        //private ColorPicker.ColorPicker colorPicker;
+        private ColorDialog colorPicker;
 
 
 	}

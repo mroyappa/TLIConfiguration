@@ -1,29 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
-using Xceed.Editors;
 using Xceed.Grid;
 
 namespace TLIConfiguration
 {
 	public partial class ColorPickerCell : UserControl
 	{
-		private Color m_cValue;
+		public Color Value = Color.Black;
 
 		public ColorPickerCell()
 		{
 			InitializeComponent();
-		}
-
-		public Color Value
-		{
-			get { return colorPicker.Color; }
-			set { colorPicker.Color = value; }
-		}
+            this.colorPicker = new ColorDialog();
+        }
 	}
 	
 	public class ColorPickerCellEditorManager : Xceed.Grid.Editors.CellEditorManager
