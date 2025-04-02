@@ -603,7 +603,7 @@ namespace TLIConfiguration
 				//if (cboAddressRange.SelectedItem.ToString().Contains("3"))
 				//{
 					iMinRange = 1;
-					iMaxRange = 9999;
+					iMaxRange = 50000;
 				//}
 				//else
 				//{

@@ -742,16 +742,15 @@ namespace TLIConfiguration
 					sProcessID = dr["ProcessID"].ToString();
 					index = Convert.ToInt32(dr["ModbusInterfaceIndex"]);
 
-					if (TLIConfiguration.VesselGaugePoints.ContainsKey(sEquipmentID))
+                    if (TLIConfiguration.VesselGaugePoints.ContainsKey(sEquipmentID))
 						if (TLIConfiguration.VesselGaugePoints[sEquipmentID].ContainsKey(sProcessID))
 						{
 							gp = TLIConfiguration.VesselGaugePoints[sEquipmentID][sProcessID];
 
-							if (gp.TCPModbusInterfaceArray == null)
+                            if (gp.TCPModbusInterfaceArray == null)
 								gp.TCPModbusInterfaceArray = new ModbusInterface[4];
-
-							//if (gp.TCPModbusInterfaceArray.Length < 3)
-							//	gp.TCPModbusInterfaceArray = Util.ExtendArray(gp.TCPModbusInterfaceArray, 3);
+							else if (gp.TCPModbusInterfaceArray.Length < 4)
+								gp.TCPModbusInterfaceArray = Util.ExtendArray(gp.TCPModbusInterfaceArray, 4);
 
 							if (gp.TCPModbusInterfaceArray[index] == null)
 								gp.TCPModbusInterfaceArray[index] = new ModbusInterface();
@@ -765,12 +764,12 @@ namespace TLIConfiguration
 								gp.TCPModbusInterfaceArray[index].RegisterAddress1 = Convert.ToUInt16(dr["RegisterAddress1"]);
 								gp.TCPModbusInterfaceArray[index].Scale = Convert.ToSingle(dr["Scale"] == DBNull.Value ? 1 : dr["Scale"]);
 
-								if (gp.TCPModbusInterfaceArray[index].ModbusDataType == ModbusDataType.Float32)
+                                if (gp.TCPModbusInterfaceArray[index].ModbusDataType == ModbusDataType.Float32)
 									gp.TCPModbusInterfaceArray[index].RegisterAddress2 = Convert.ToUInt16(dr["RegisterAddress2"]);
 								else
 									gp.TCPModbusInterfaceArray[index].RegisterAddress2 = 0;
 
-								if (dr["CMaxRegisterAddress1"] != DBNull.Value &&
+                                if (dr["CMaxRegisterAddress1"] != DBNull.Value &&
 									dr["CMaxRegisterAddress1"].ToString() != "" &&
 									dr["CMaxRegisterAddress1"].ToString() != "0")
 								{
@@ -783,8 +782,9 @@ namespace TLIConfiguration
 									gp.TCPModbusInterfaceArray[index].CMaxRegisterAddress1 = 0;
 									gp.TCPModbusInterfaceArray[index].CMaxRegisterAddress2 = 0;
 									gp.TCPModbusInterfaceArray[index].CMaxScale = 0;
-								}
-							}
+                                }
+                                //Console.WriteLine("FOUR");
+                            }
 							else
 								gp.TCPModbusInterfaceArray[index].Enable = false;
 						}

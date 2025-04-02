@@ -173,11 +173,12 @@ namespace TLIConfiguration
 		private void InitializingNewDataRow(object sender, Xceed.Grid.InitializingNewDataRowEventArgs e)
 		{
 			e.DataRow.Cells["Cargo"].Value = true;
+			e.DataRow.Cells["ID"].Value = 0;
 		}
 
 		private void AddingDataRow(object sender, Xceed.Grid.AddingDataRowEventArgs e)
-		{
-			e.DataRow.BeginningEdit += new CancelEventHandler(BeginningEdit);
+        {
+            e.DataRow.BeginningEdit += new CancelEventHandler(BeginningEdit);
 			e.DataRow.EndingEdit += new CancelEventHandler(EndingEdit);
 		}
 
@@ -193,26 +194,28 @@ namespace TLIConfiguration
 			if (Disposing)
 				return;
 
-			if (m_EditRow == null)
+			if (m_EditRow == null && !e.Cancel)
             {
                 Console.WriteLine("EndingEdit : " + m_InsertionRow.Cells["ProductName"].Value + " : " + m_InsertionRow.Cells["SpecificGravity"].Value + " : " +
                     m_InsertionRow.Cells["Cargo"].Value + " : " + m_InsertionRow.Cells["GaugeColor"].Value);
-                if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["ProductName"], "Product", e);
-				if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["SpecificGravity"], "Specific Gravity", e);
-				if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["Cargo"], "Cargo", e);
-				if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["GaugeColor"], "Product Color", e);
-				if (!e.Cancel) ValidateNewRow(m_InsertionRow, e);
-				if (!e.Cancel) m_InsertionRow.Cells["Index"].Value = m_iIndex++;
+				customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["ProductName"], "Product", e);
+				customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["SpecificGravity"], "Specific Gravity", e);
+				customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["Cargo"], "Cargo", e);
+				customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["GaugeColor"], "Product Color", e);
+                customXceedGridControl.EnforceNonBlankCell(m_InsertionRow.Cells["ID"], "ID", e);
+                ValidateNewRow(m_InsertionRow, e);
+				m_InsertionRow.Cells["Index"].Value = m_iIndex++;
 			}
-			else if (m_EditRow != null)
+			else if (m_EditRow != null && !e.Cancel)
             {
                 Console.WriteLine("EndingEdit : " + m_EditRow.Cells["ProductName"].Value + " : " + m_EditRow.Cells["SpecificGravity"].Value + " : " +
                     m_EditRow.Cells["Cargo"].Value + " : " + m_EditRow.Cells["GaugeColor"].Value);
-                if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["ProductName"], "Product", e);
-				if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["SpecificGravity"], "Specific Gravity", e);
-				if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["Cargo"], "Cargo", e);
-				if (!e.Cancel) customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["GaugeColor"], "Product Color", e);
-				if (!e.Cancel) ValidateEditRow(m_EditRow, e);
+                customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["ProductName"], "Product", e);
+				customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["SpecificGravity"], "Specific Gravity", e);
+				customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["Cargo"], "Cargo", e);
+				customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["GaugeColor"], "Product Color", e);
+                customXceedGridControl.EnforceNonBlankCell(m_EditRow.Cells["ID"], "ID", e);
+                ValidateEditRow(m_EditRow, e);
 			}
 
 			m_EditRow = null;
